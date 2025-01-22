@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS topico (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    autor VARCHAR(255) NOT NULL,
+    curso VARCHAR(255) NOT NULL,
+    mensaje TEXT NOT NULL,
+    status ENUM('activo', 'inactivo') DEFAULT 'activo',
+    titulo VARCHAR(255) NOT NULL,
+    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    fecha_actualizacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
